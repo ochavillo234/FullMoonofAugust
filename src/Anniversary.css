@@ -1,0 +1,6 @@
+.bg-background {
+    background-image: url('./assets/purple.png'); /* Replace with heart.png if needed */
+    background-size: 110px 110px; /* Size of the pattern */
+    background-repeat: repeat; /* Repeats the pattern */
+    background-position: center;
+  }

@@ -1,0 +1,21 @@
+/* Add this to your CSS file for the dot wave animation */
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.dot {
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+.dot.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.dot.delay-400 {
+  animation-delay: 0.4s;
+}

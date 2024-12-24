@@ -1,0 +1,107 @@
+/* Home.css */
+@keyframes fillEffect {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Slide-up animation when description shows */
+@keyframes slideUp {
+    0% {
+      transform: translateY(-20%); /* Start from below the container */
+    }
+    100% {
+      transform: translateY(0); /* End at its original position inside the container */
+    }
+  }
+  
+  /* Slide-down animation when description closes */
+  @keyframes slideDown {
+    100% {
+      transform: translateY(0); /* Start from its original position */
+    }
+    0% {
+      transform: translateY(100%); /* End at the bottom of the container */
+    }
+  }
+  
+  /* Slide-up class */
+  .slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  
+  /* Slide-down class */
+  .slide-down {
+    animation: slideDown 0.5s ease-in forwards;
+  }
+  
+  .bg-pattern {
+    background-image: url('./assets/blue.png'); /* Replace with heart.png if needed */
+    background-size: 110px 110px; /* Size of the pattern */
+    background-repeat: repeat; /* Repeats the pattern */
+    background-position: center;
+  }
+
+  .solid-shadow {
+    box-shadow: 0px 0px 10px rgba(166, 166, 166, 0.9); /* Adjust opacity for more solid look */
+  }
+  
+@media (max-width: 600px){
+.overall {
+  width: 75%
+}
+
+.comments {
+  font-size: 0.4rem;
+}
+
+.footer {
+  font-size: 0.6rem;
+  width: auto;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.bg-pattern{
+  background-size: 50px 50px;
+}
+
+.first {
+  padding-right: 10px;
+}
+
+.profile{
+  height: 50px;
+  width: 50px;
+}
+
+.commentbox{
+  height: 2rem;
+}
+
+.sendcomment{
+  width: 1.5rem;
+  height: 1.5rem;;
+}
+
+.info {
+  width: 0.9rem;
+  height: 0.9rem;
+  position: absolute;
+  top: 2;
+  left: 2;
+}
+
+.playpause{
+  position: absolute;
+  top: 2;
+  right: 2;
+}
+
+.low {
+  font-size: 0.7rem;
+}
+}

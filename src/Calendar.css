@@ -1,0 +1,11 @@
+.bg-image {
+    background-image: url('./assets/red.png'); /* Replace with heart.png if needed */
+    background-size: 110px 110px; /* Size of the pattern */
+    background-repeat: repeat; /* Repeats the pattern */
+    background-position: center;
+  }
+
+  .solid-shadow {
+    box-shadow: 0px 0px 10px rgba(166, 166, 166, 0.9); /* Adjust opacity for more solid look */
+ }
+  
