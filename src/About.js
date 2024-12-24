@@ -36,7 +36,7 @@ const About = () => {
   };
 
   const currentProfile = profiles[currentIndex];
-  
+
   return (
     <div
       className="bg-first flex justify-center items-center min-h-screen bg-cover bg-repeat bg-center sm:bg-[50px_50px]"
