@@ -1,3 +1,9 @@
+.bg-first {
+    background-size: 110px 110px;
+    background-repeat: repeat;
+    background-position: center;
+  } 
+
 @media (max-width: 600px){ 
     .footer-a {
         font-size: 0.6rem;
@@ -17,6 +23,37 @@
     }
 
     .bg-first{
-        background-size: 50px 50px;
+        background-size: 60px 60px;
     }
+
+    .buttonprev {
+        height: 15px;
+        width: 15px;
+    }
+
+    .midtext {
+        text-align: center; /* Equivalent to text-center */
+        font-size: 0.75rem; /* Equivalent to text-sm */
+        background-color: #e5e7eb; /* Equivalent to bg-gray-200 */
+        padding-left: 0.9rem; /* Equivalent to px-2 */
+        padding-right: 0.9rem; /* Equivalent to px-2 */
+        padding-top: 0.15rem; /* Equivalent to py-1 */
+        padding-bottom: 0.15rem; /* Equivalent to py-1 */
+        border-radius: 0.75rem; /* Equivalent to rounded-xl */
+    }
+
+    .mt {
+        font-size: xx-small;
+    }
+
+    .buttonnext {
+        height: 15px;
+        width: 15px;
+    }
+
+    .cpn {
+        font-size: 25px;
+    }
+
+
 }

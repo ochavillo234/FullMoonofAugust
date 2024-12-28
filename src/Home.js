@@ -117,7 +117,7 @@ const Home = () => {
           {/* Info button with "information.png" positioned at the top left of the image */}
           <button
             onClick={handleInfoClick}
-            className="absolute top-6 left-6 bg-transparent border-none cursor-pointer Hover:bg-gray-300 hover:scale-110 hover:shadow-lg p-2 rounded-full transition-all"
+            className="sinfo absolute top-6 left-6 bg-transparent border-none cursor-pointer Hover:bg-gray-300 hover:scale-110 hover:shadow-lg p-2 rounded-full transition-all"
           >
             <img
               src={informationIcon} // The path to your image
@@ -129,12 +129,12 @@ const Home = () => {
           {/* Play/Pause button positioned on the right */}
           <button
             onClick={handlePlayPauseClick}
-            className="playpause absolute top-6 right-6 bg-transparent border-none cursor-pointer Hover:bg-gray-300 hover:scale-110 hover:shadow-lg p-2 rounded-full transition-all"
+            className="pp absolute top-6 right-6 bg-transparent border-none cursor-pointer Hover:bg-gray-300 hover:scale-110 hover:shadow-lg p-2 rounded-full transition-all"
           >
             {isPlaying ? (
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M320-320h320v-320H320v320ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className="playpause" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M320-320h320v-320H320v320ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="playpause" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
             )}
           </button>
 
@@ -163,7 +163,7 @@ const Home = () => {
           {/* Overlay with description */}
           {overlayVisible && (
             <div
-              className={`absolute bottom-0 left-0 mb-4 ml-4 mr-4 h-3/4 bg-black bg-opacity-50 text-white flex justify-center items-center text-center p-4 rounded-lg cursor-pointer transition-transform duration-500 ease-in-out transform ${
+              className={`absolute bottom-0 left-0 mb-4 ml-4 mr-4 h-1/2 bg-black bg-opacity-50 text-white flex justify-center items-center text-center p-4 rounded-lg cursor-pointer transition-transform duration-500 ease-in-out transform ${
                 overlayVisible ? 'slide-up' : 'slide-down'
               }`}
               style={{
@@ -172,8 +172,8 @@ const Home = () => {
               onClick={handleOverlayClick} // Close overlay when clicked
             >
               <div className="text-center">
-                <h2 className="text-2xl mb-2 font-shrikhand">{imageDescriptions[currentImageIndex].title}</h2>
-                <p className="text-sm">{imageDescriptions[currentImageIndex].text}</p>
+                <h2 className="title text-2xl mb-2 font-shrikhand">{imageDescriptions[currentImageIndex].title}</h2>
+                <p className="desc text-sm">{imageDescriptions[currentImageIndex].text}</p>
               </div>
             </div>
           )}
@@ -184,7 +184,7 @@ const Home = () => {
               {images.map((_, index) => (
                 <button
                 key={index}
-                className={`relative w-3 h-3 rounded-full cursor-pointer overflow-hidden transition-all duration-300 ease-in-out ${
+                className={`dots relative w-3 h-3 rounded-full cursor-pointer overflow-hidden transition-all duration-300 ease-in-out ${
                   index === currentImageIndex
                     ? 'bg-gray-300 shadow-md scale-110 w-10'
                     : 'bg-gray-300 hover:bg-gray-400'

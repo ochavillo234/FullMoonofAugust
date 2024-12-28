@@ -39,38 +39,35 @@ const About = () => {
 
   return (
     <div
-      className="bg-first flex justify-center items-center min-h-screen bg-cover bg-repeat bg-center sm:bg-[50px_50px]"
+      className="bg-first flex justify-center items-center min-h-screen bg-cover bg-repeat bg-center"
       style={{
         backgroundImage: `url(${currentProfile.backgroundImage})`,
-        backgroundSize: "110px 110px", // Set specific size for the repeating background
-        backgroundRepeat: "repeat", // Enable background repetition
-        backgroundPosition: "center", // Center the background pattern
       }}
-    >
+    > 
       <div className="w-11/12 md:w-5/12 overflow-hidden relative rounded-xl solid-shadow bg-white p-6">
         {/* Top Section */}
         <div className="flex justify-between items-center mb-4">
-          <button className=" items-center justify-center p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all" onClick={handlePrevious}>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#666666">
+          <button className="leftprev items-center justify-center p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all" onClick={handlePrevious}>
+            <svg xmlns="http://www.w3.org/2000/svg" className='buttonprev' height="24px" viewBox="0 -960 960 960" width="24px" fill="#666666">
               <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
             </svg>
           </button>
 
-          <div className="text-center text-sm bg-gray-200 px-10 py-1 rounded-xl">
-            <a href="" rel="noopener noreferrer" className="text-sm text-blue-500 hover:underline">
+          <div className="midtext text-center text-sm bg-gray-200 px-10 py-1 rounded-xl">
+            <a href="" rel="noopener noreferrer" className="mt text-sm text-blue-500 hover:underline">
               https://fullmoonsofaugust.com/aboutus
             </a>
           </div>
 
-          <button className="items-center justify-center p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all" onClick={handleNext}>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#666666"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+          <button className="rightnext items-center justify-center p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-all" onClick={handleNext}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="buttonnext" height="24px" viewBox="0 -960 960 960" width="24px" fill="#666666"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
           </button>
         </div>
 
         {/* Profile Section */}
         <div className="text-center">
-          <div className="text-3xl font-bold text-gray-800 mb-4">{currentProfile.name}</div>
-          <img src={currentProfile.image} alt={currentProfile.name} className="w-auto h-50 mx-auto mb-4" />
+          <div className="cpn text-3xl font-bold text-gray-800 mb-4">{currentProfile.name}</div>
+          <img src={currentProfile.image} alt={currentProfile.name} className="cid w-auto h-50 mx-auto mb-4" />
         </div>
 
         {/* Footer Section */}

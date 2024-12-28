@@ -66,7 +66,7 @@
 }
 
 .bg-pattern{
-  background-size: 50px 50px;
+  background-size: 60px 60px;
 }
 
 .first {
@@ -78,8 +78,18 @@
   width: 50px;
 }
 
-.commentbox{
-  height: 2rem;
+.commentbox {
+  height: 2rem; /* Sets the height of the box */
+  overflow-y: auto; /* Enables vertical scrolling only when content overflows */
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.dots {
+  width: 8px;
+  height: 8px;
 }
 
 .sendcomment{
@@ -87,18 +97,37 @@
   height: 1.5rem;;
 }
 
+.sinfo {
+  top: 1.1rem;
+  left: 1rem;
+}
+
 .info {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 10px;
+  height: 10px;
   position: absolute;
   top: 2;
   left: 2;
 }
 
+.pp {
+  top: .901rem;
+  right: 1.8rem;
+}
+
 .playpause{
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 2;
-  right: 2;
+}
+
+.title {
+  font-size: small;
+  margin-bottom: 0;
+}
+
+.desc {
+  font-size: x-small;
 }
 
 .low {
