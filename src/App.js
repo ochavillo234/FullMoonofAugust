@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate, Switch} from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import Calendar from './Calendar';  // Import your Calendar component
 import Home from './Home';          // Example of another component (you can change this)
