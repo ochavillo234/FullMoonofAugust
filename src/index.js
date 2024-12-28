@@ -1,13 +1,13 @@
 // src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';  // Notice the change here: 'react-dom/client'
-import './index.css';  // Import global CSS (including Tailwind)
-import App from './App';  // Import App component
+import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client' for React 18+
+import './index.css'; // Import global CSS (including Tailwind or other styles)
+import App from './App'; // Import the App component
 
-// Use createRoot instead of render (React 18+)
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Create a root for the React application (React 18+)
+const root = ReactDOM.createRoot(document.getElementById('root')); // Get the element where React will mount
 root.render(
   <React.StrictMode>
-    <App />  {/* Render the App component */}
+    <App /> {/* Render the App component */}
   </React.StrictMode>
 );
