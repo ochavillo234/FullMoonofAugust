@@ -20,6 +20,7 @@ const Calendar = () => {
     }
   };
 
+
   const handleDateChange = (e) => {
     setDateInput(e.target.value);
   };
@@ -70,48 +71,52 @@ const Calendar = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-image">
-      <div className="w-1/2 bg-white rounded-md solid-shadow overflow-hidden relative">
+      <div className="boxcal w-1/2 bg-white rounded-md solid-shadow overflow-hidden relative">
         <div className="bg-red-800 text-white p-4 text-center">
-          <h2 className="text-2xl font-shrikhand">Our Love's Timeline</h2>
+          <h2 className=" caltit text-2xl font-shrikhand">Our Love's Timeline</h2>
         </div>
 
         <div className="p-2">{renderCalendar()}</div>
 
-        <div className="flex justify-between items-center py-4 px-4">
+        <div>
+        {/* enter date */}
+        <div className="datennav flex justify-between items-center py-4 px-4">
           <div className="flex items-center space-x-2">
             <input
               type="date"
               value={dateInput}
               onChange={handleDateChange}
-              className="px-3 py-1 text-sm border-2 rounded-md"
+              className="datehandle px-3 py-1 text-sm border-2 rounded-md"
             />
             <button
               onClick={applyDate}
-              className="px-3 py-1 text-sm text-white bg-blue-700 rounded-md hover:bg-blue-900 transition duration-300"
+              className="applydate px-3 py-1 text-sm text-white bg-blue-700 rounded-md hover:bg-blue-900 transition duration-300"
             >
               Apply
             </button>
             <button
               onClick={clearDate}
-              className="px-3 py-1 text-sm text-white bg-red-700 rounded-md hover:bg-red-900 transition duration-300"
+              className="cleardate px-3 py-1 text-sm text-white bg-red-700 rounded-md hover:bg-red-900 transition duration-300"
             >
               Clear
             </button>
           </div>
 
-          <div className="flex items-center space-x-2">
+
+          {/* Year navigation */}
+          <div className="navcont flex items-center space-x-2">
             <button
               onClick={() => handleYearChange('previous')}
-              className="px-3 py-1 rounded-l-lg text-sm hover:shadow-lg transition duration-300"
+              className="dpb px-3 py-1 rounded-l-lg text-sm hover:shadow-lg transition duration-300"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className="prevyear" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z"/></svg>
             </button>
-            <div className="flex space-x-2">
+            <div className="navcont flex space-x-2">
               {[2023, 2024, 2025].map((year) => (
                 <div
                   key={year}
                   onClick={() => setCurrentYear(year)}
-                  className={`cursor-pointer px-3 py-1 text-xs border-2 rounded-md ${
+                  className={`year-button cursor-pointer px-3 py-1 text-xs border-2 rounded-md ${
                     currentYear === year ? 'bg-blue-700 text-white' : 'bg-white text-gray-500'
                   }`}
                 >
@@ -123,10 +128,11 @@ const Calendar = () => {
               onClick={() => handleYearChange('next')}
               className="px-3 py-1 rounded-r-lg text-sm hover:shadow-lg transition duration-300"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" classname="nextyear" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z"/></svg>
             </button>
           </div>
-        </div>
+          </div>
+      </div>
 
         {errorMessage && (
           <div className="text-red-500 text-center text-sm py-1">{errorMessage}</div>
@@ -139,31 +145,31 @@ const Calendar = () => {
           <div className="flex justify-center items-center space-x-4 pt-6">
 
             <Link to="/about">
-            <button className="px-10 py-2 mr-8 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+            <button className="footer-c px-10 py-2 mr-8 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
               about
             </button>
             </Link>
 
             <Link to="/calendar">
-              <button className="px-9 py-2 mr-8 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+              <button className="footer-d px-9 py-2 mr-8 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
                 calendar
               </button>
             </Link>
 
             <Link to="/anniversary">
-            <button className="px-9 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+            <button className="footer-d px-9 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
               anniversary
             </button>
             </Link>
             
             <Link to="/">
-              <button className="px-10 py-2 ml-8 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+              <button className="footer-c px-10 py-2 ml-8 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
                 home
               </button>
             </Link>
           </div>
           <div className="pt-5 text-sm text-gray-300">
-            <p>(made with love)</p>
+            <p className='markings'>(made with love)</p>
           </div>
         </div>
       </div>

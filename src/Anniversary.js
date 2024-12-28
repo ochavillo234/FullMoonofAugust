@@ -36,7 +36,7 @@ const Anniversary = () => {
   };
 
   const handleHomeClick = () => {
-    navigate('/home');
+    navigate('/');
   };
 
   const handleMenuClick = () => {
@@ -57,43 +57,43 @@ const Anniversary = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-background">
-      <div className="w-5/12 bg-white rounded-md solid-shadow overflow-hidden relative">
+      <div className="annivbox w-5/12 bg-white rounded-md solid-shadow overflow-hidden relative">
         <div className="bg-purple-300 m-4 rounded-md flex justify-between items-center">
-          <div className="w-3/12 flex justify-start items-center p-2">
+          <div className="first-box w-3/12 flex justify-start items-center p-2">
             <img
               src={love}
               alt="Small Image"
-              className="w-auto h-auto rounded-full"
+              className="love-image w-auto h-auto rounded-full"
             />
           </div>
-          <div className="w-5/12 flex justify-center items-center">
-            <h1 className="text-sm font-sometype font-semibold">iloveyou.exe</h1>
+          <div className="second-box w-5/12 flex justify-center items-center">
+            <h1 className="love-text text-sm font-sometype font-semibold">iloveyou.exe</h1>
           </div>
-          <div className="w-1/4 flex justify-end items-center p-2 mr-2 relative">
+          <div className="third-box w-1/4 flex justify-end items-center p-2 mr-2 relative">
             <div
-              className="w-9 h-9 p-2 m-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex justify-center items-center shadow-lg cursor-pointer menu-icon hover:scale-110 transition-transform duration-300"
+              className="home-button w-9 h-9 p-2 m-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex justify-center items-center shadow-lg cursor-pointer menu-icon hover:scale-110 transition-transform duration-300"
               onClick={handleHomeClick}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+              <svg xmlns="http://www.w3.org/2000/svg" className='home-click' height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
                 <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
               </svg>
             </div>
             <div
-              className="w-9 h-9 p-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex justify-center items-center shadow-lg cursor-pointer menu-icon hover:scale-110 transition-transform duration-300"
+              className="menu-button w-9 h-9 p-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex justify-center items-center shadow-lg cursor-pointer menu-icon hover:scale-110 transition-transform duration-300"
               onClick={handleMenuClick}
             >
               {isMenuClicked ? (
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                <svg xmlns="http://www.w3.org/2000/svg" className='close-menu' height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
                   <path d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z" />
                 </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                <svg xmlns="http://www.w3.org/2000/svg" className='open-menu' height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
                   <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                 </svg>
               )}
             </div>
             {showDropdown && (
-              <div className="absolute z-50 top-12 right-0 w-48 bg-white border border-gray-300 shadow-xl rounded-lg dropdown-menu animate-fade-in">
+              <div className="drop-box absolute z-50 top-12 right-0 w-48 bg-white border border-gray-300 shadow-xl rounded-lg dropdown-menu animate-fade-in">
                 <div
                   className="flex items-center gap-x-3 p-2 text-sm text-gray-700 font-medium hover:bg-purple-100 hover:text-purple-700 rounded-lg cursor-pointer transition-colors duration-200"
                   onClick={() => setCurrentPage('annivside')}
@@ -138,13 +138,13 @@ const Anniversary = () => {
           </div>
         </div>
 
-        <div className="p-6 border-2 m-4 rounded-md border-purple-500">
+        <div className="annivde-content p-6 border-2 m-4 rounded-md border-purple-500">
           {renderContent()}
         </div>
 
         <div className="rounded-b-lg">
           <div className="p-4 mb-2 text-sm text-gray-300 text-center">
-            <p>(made with love)</p>
+            <p className='markings'>(made with love)</p>
           </div>
         </div>
       </div>

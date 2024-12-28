@@ -1,5 +1,6 @@
 import React from 'react';
 import e1 from './assets/e1.jpg';
+import './Event.css'
 
 // Events object with key-value pairs for dates and events
 const events = {
@@ -62,21 +63,21 @@ const Event = ({ date }) => {
 
   return (
     <div className="p-6 m-4 shadow-xl bg-red-800 mx-auto transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col justify-center items-center">
-      <h3 className="text-xl font-semibold text-white text-center mb-4">
+      <h3 className="eventtext text-xl font-semibold text-white text-center mb-4">
         Event on {date || 'Selected Date'}
       </h3>
   
-      <div className="p-2 w-1/2 flex justify-center items-center bg-white rounded-full shadow-md">
+      <div className="eventevent p-2 w-1/2 flex justify-center items-center bg-white rounded-full shadow-md">
         {event ? (
-          <p className="text-mid text-gray-700 text-center font-shrikhand">{event}</p>
+          <p className="eventganap text-mid text-gray-700 text-center font-shrikhand">{event}</p>
         ) : (
-          <p className="text-sm text-gray-700 text-center">
+          <p className="eventempty text-sm text-gray-700 text-center">
             No events scheduled for this date. Check back soon!
           </p>
         )}
       </div>
   
-      <p className="text-xs text-white text-center mt-4">
+      <p className="eventrem text-xs text-white text-center mt-4">
         Keep the memories alive and celebrate every moment with love!
       </p>
     </div>

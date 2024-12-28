@@ -1,0 +1,56 @@
+@media (max-width: 600px){
+    .one-text {
+        font-size: 1rem;
+    } 
+
+    .two-text {
+        font-size: 0.5rem;
+    }
+
+    .one-box, .two-box, .three-box   {
+        padding: 8px;
+        width: fit-content;
+        overflow-y: auto; /* Enables vertical scrolling if content exceeds height */
+        overflow-x: hidden; /* Optional: to disable horizontal scrolling */
+    }
+
+    .boxes {
+        gap: 0.5rem;
+    }
+
+    .oney, .secondy, .thirdy {
+        margin-bottom: 5px;
+    }
+    .one-link, .two-link, .three-link {
+        display: flex;
+        flex-direction: column-reverse; /* Reverses the column layout, putting the text below the SVG */
+        align-items: center; /* Centers the items horizontally */
+        justify-content: center; /* Centers the items vertically */
+        text-align: center; /* Ensures text is centered */
+    }
+    
+    .one-year, .two-year, .three-year {
+        margin-bottom: 2px; /* Adds space between the SVG and the text */
+    }
+    
+    .one-desc, .two-desc, .three-desc {
+        font-family: 'Shrikhand', sans-serif; /* Ensure you have the correct font-family */
+        font-size: 0.55rem; /* You can adjust the font size */
+        color: #4b5563; /* Dark gray color */
+        text-align: center; /* Ensures the text is centered */
+        text-align: center; /* Center the text horizontally */
+        display: block; /* Ensure the text is block-level so it takes the full width */
+        margin: 0 auto; /* Ensure the text is horizontally centered */
+        padding-right: 8px;
+
+    }
+
+    .anniv-date {
+        font-size: medium;
+    } 
+
+    .anniv-mess {
+        font-size: x-small;
+    }
+    
+}

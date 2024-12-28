@@ -8,4 +8,81 @@
   .solid-shadow {
     box-shadow: 0px 0px 10px rgba(166, 166, 166, 0.9); /* Adjust opacity for more solid look */
  }
+
+ @media (max-width: 600px) {
+  .footer-c {
+    font-size: 0.6rem;
+    width: 40px;
+    padding: 2px;
+    border-radius: 6px;
+    margin: 0;
+  }
+
+  .footer-d {
+      font-size: 0.6rem;
+      width: 70px;
+      padding: 2px;
+      border-radius: 6px;
+      margin: 0;
+      margin-left: 0;
+  }
+
+  .bg-image {
+      background-size: 60px 60px;
+  }
+
+  .boxcal {
+    width: 80%;
+  }
+
+  .caltit {
+    font-size: large;
+  }
+
+
+  .datehandle {
+    padding-left: 1rem; /* Smaller padding on left */
+    padding-right: 1rem; /* Smaller padding on right */
+    padding-top: 0.10rem; /* Smaller padding on top */
+    padding-bottom: 0.10rem; /* Smaller padding on bottom */
+    font-size: 0.5rem; /* Smaller font size */
+    border-width: 1px; /* Thinner border */
+    border-radius: 0.375rem; /* Slightly smaller border radius */
+  }
   
+  .applydate, .cleardate {
+    padding-left: 1rem; /* Smaller padding on left */
+    padding-right: 1rem; /* Smaller padding on right */
+    padding-top: 0.10rem; /* Smaller padding on top */
+    padding-bottom: 0.10rem; /* Smaller padding on bottom */
+    font-size: 0.5rem; /* Smaller font size */
+    border-width: 1px; /* Thinner border */
+    border-radius: 0.375rem; /* Slightly smaller border radius */
+  }
+
+  .datennav {
+    flex-direction: column-reverse; /* Places year navigation below enter date */
+    gap: 1rem; /* Adds spacing between elements */
+    padding: 4px;
+  }
+
+  .year-button {
+    cursor: pointer;
+    padding: 0.125rem 0.25rem; /* Smaller padding (was px-3 py-1) */
+    font-size: 0.625rem; /* Smaller font size (was text-xs) */
+    border: 1px solid #ccc; /* Maintain a visible border but thinner */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    margin: 0; /* Remove any default margin */
+  }
+  
+  .year-button + .year-button {
+    margin-left: 0; /* No space between adjacent buttons */
+  }
+
+  .navcont {
+    display: flex;
+    justify-content: center;
+    gap: 0; /* Reduced space between elements (was 8px in space-x-2) */
+  }
+  
+ }

@@ -83,7 +83,7 @@ const Cal2024 = () => {
                 <td key={idx} className="p-1 border text-xs">
                   {day !== '' && (
                     <div
-                      className={`w-4 h-4 rounded-full flex justify-center items-center mx-auto ${getDateClass(month, day)}`}
+                      className={`datecal w-4 h-4 rounded-full flex justify-center items-center mx-auto ${getDateClass(month, day)}`}
                     >
                       {day}
                     </div>
@@ -99,18 +99,18 @@ const Cal2024 = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="text-center pt-4">
-        <h2 className="text-xl font-shrikhand">2024</h2>
+      <div className="titbox text-center pt-4">
+        <h2 className="tittext text-xl font-shrikhand">2024</h2>
       </div>
 
-      <div className="flex space-x-2 overflow-x-auto pt-4">
+      <div className="contbox flex space-x-2 overflow-x-auto pt-4">
         {[c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12].map((image, index) => (
           <div key={index} className="flex-1 border-2 border-gray-300 rounded-md p-1 mx-auto transform transition duration-300 hover:scale-105">
-            <div className="mb-2 text-center text-sm text-gray-700 font-shrikhand">
+            <div className="calmon mb-2 text-center text-sm text-gray-700 font-shrikhand">
               {['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][index]}
             </div>
             <div className="mb-2">
-              <img src={image} alt={`c${index + 1}`} className="w-full h-20 object-cover rounded-md" />
+              <img src={image} alt={`c${index + 1}`} className="calimage w-full h-20 object-cover rounded-md" />
             </div>
             <div className="flex justify-center">
               {renderMonthCalendar(index + 1, 2024)}

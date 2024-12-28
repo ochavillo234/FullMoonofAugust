@@ -1,0 +1,18 @@
+@media (max-width: 600px){
+    .Messtext {
+        font-size: medium;
+    }
+
+    .Messdesc {
+        font-size: x-small;
+    }
+
+    .textmessa {
+        font-size: small;
+    }
+
+    .buttonmess {
+        font-size: small;
+        height: auto;
+    }
+}

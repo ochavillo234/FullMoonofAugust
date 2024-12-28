@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com'; // Import emailjs-com
+import './Sendmessage.css';
 
 const Sendmessage = () => {
   const navigate = useNavigate();
@@ -74,8 +75,8 @@ const Sendmessage = () => {
     <div className="relative">
       <div className="p-4">
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-shrikhand text-purple-700">Send a Message</h2>
-          <p className="text-gray-600 text-sm">Magsend ka ng message sa akin. Kapag hindi, hindi mo me love!</p>
+          <h2 className="Messtext text-2xl font-shrikhand text-purple-700">Send a Message</h2>
+          <p className="Messdesc text-gray-600 text-sm">Magsend ka ng message sa akin. Kapag hindi, hindi mo me love!</p>
         </div>
         <form onSubmit={handleSendMessage} className="space-y-6">
           {/* Message Box with Integrated Button */}
@@ -85,8 +86,8 @@ const Sendmessage = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
-              className="w-full font-sometype p-4 bg-gray-800 text-white rounded-t-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
-              rows="8"
+              className="textmessa w-full font-sometype p-4 bg-gray-800 text-white rounded-t-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
+              rows="2"
               style={{
                 borderBottomLeftRadius: '0',
                 borderBottomRightRadius: '0',
@@ -96,7 +97,7 @@ const Sendmessage = () => {
             {/* Button */}
             <button
               type="submit"
-              className="w-full bg-purple-500 text-white py-3 font-semibold rounded-b-lg hover:bg-purple-700 transition-all"
+              className="buttonmess w-full bg-purple-500 text-white py-3 font-semibold rounded-b-lg hover:bg-purple-700 transition-all"
               disabled={isLoading} // Disable button while loading
             >
               {isLoading ? 'Sending...' : 'Submit'}

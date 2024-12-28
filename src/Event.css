@@ -1,0 +1,40 @@
+@media (max-width: 600px) {
+    .eventtext {
+        font-size: 1rem; /* Reduced size (text-lg equivalent) */
+        font-weight: 500; /* Semi-bold text */
+        color: #ffffff; /* White color */
+        text-align: center;
+        margin-bottom: 0.5rem; /* Reduced margin */
+      }
+      
+      .eventevent {
+        padding: 0.25rem; /* Smaller padding */
+        width: 75%; /* Smaller width (w-3/4 equivalent) */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff; /* White background */
+        border-radius: 9999px; /* Rounded full */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+      }
+      
+      .eventganap {
+        font-size: 0.875rem; /* Smaller font size (text-sm equivalent) */
+        color: #374151; /* Gray text color */
+        text-align: center;
+        font-family: 'Shrikhand', sans-serif; /* Custom font */
+      }
+      
+      .eventempty {
+        font-size: 0.5rem; /* Smaller font size (text-xs equivalent) */
+        color: #374151; /* Gray text color */
+        text-align: center;
+      }
+      
+      .eventrem {
+        font-size: 0.625rem; /* Smaller font size (text-xxs equivalent) */
+        color: #ffffff; /* White text */
+        text-align: center;
+        margin-top: 0.5rem; /* Reduced margin */
+      } 
+}

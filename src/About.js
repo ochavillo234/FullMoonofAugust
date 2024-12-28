@@ -101,7 +101,7 @@ const About = () => {
             </Link>
           </div>
           <div className="low pt-5 text-sm text-gray-300">
-            <p>(made with love)</p>
+            <p className='markings'>(made with love)</p>
           </div>
         </div>
       </div>

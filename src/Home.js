@@ -18,7 +18,7 @@ const images = [image1, image2, image3, image4, image5];
 const imageDescriptions = [
   { title: 'Ayala Malls Gala', text: '2nd time to agala in Ayala Malls Vermosa but first time in the Christmas Show.' },
   { title: 'Photobooth', text: '1st Anniversary and 1st Photobooth.' },
-  { title: 'University Games', text: 'The second time experiencing UGames with each other but we are officially couple.' },
+  { title: 'Tagaytay', text: 'Christmas season gala and 16th months of love.' },
   { title: 'Mirror Shoot', text: '1st Anniversary and 1st time exploring Manila.' },
   { title: 'HHWW', text: 'We are so sipag to go school together.' },
 ];
@@ -298,7 +298,7 @@ const Home = () => {
 
             </div>
             <div className='low pt-5 text-sm text-gray-300'>
-              <p>(made with love)</p>
+              <p className='markings'>(made with love)</p>
             </div>
           </div>
         </div>

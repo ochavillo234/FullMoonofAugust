@@ -16,7 +16,7 @@ const Login = ({ setIsLoggedIn }) => {  // Use the prop correctly here
   const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate(); // Initialize navigate function
 
-  const hardcodedPassword = 'mypassword123'; // Hardcoded password
+  const hardcodedPassword = 'mylove0910'; // Hardcoded password
 
   const togglePassword = () => {
     setShowPassword(!showPassword);
@@ -49,14 +49,14 @@ const Login = ({ setIsLoggedIn }) => {  // Use the prop correctly here
       {loading && <LoadingPage />}
 
       {/* Outer div (container) */}
-      <div className="w-full max-w-lg bg-white rounded-lg solid-shadow">
+      <div className="boxlog w-full max-w-lg bg-white rounded-lg solid-shadow">
         {/* Upper section */}
         <div className="bg-purple-300 p-4 rounded-t-lg flex justify-center items-center">
           <div className="flex w-full">
             {/* Left 50% Section */}
             <div className="w-8/12 p-2 flex flex-col justify-center items-start">
-              <h2 className="text-2xl text-center font-shrikhand">astrocane</h2>
-              <p className="text-sm text-center">messages</p>
+              <h2 className="texttitlle text-2xl text-center font-shrikhand">astrocane</h2>
+              <p className="textsecond text-sm text-center">messages</p>
             </div>
 
             {/* Right 50% Section */}
@@ -72,32 +72,32 @@ const Login = ({ setIsLoggedIn }) => {  // Use the prop correctly here
 
         {/* Middle section with password input */}
         <div className="p-4 rounded-b-lg">
-          <h2 className="text-lg text-center text-gray-800 font-semibold mb-4">Enter The Password</h2>
+          <h2 className="textpass text-lg text-center text-gray-800 font-semibold mb-4">Enter The Password</h2>
 
-          <div className="flex items-center space-x-3 bg-blue-50 p-2 rounded-lg border-2 border-purple-300">
+          <div className="passinput flex items-center space-x-3 bg-blue-50 p-2 rounded-lg border-2 border-purple-300">
             <input
               type={showPassword ? 'text' : 'password'}
               placeholder="Enter your password"
               value={inputPassword}
               onChange={handlePasswordChange}
-              className="w-full p-3 rounded-md border-2 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="inputbox w-full p-3 rounded-md border-2 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
             <button
               type="button"
               onClick={togglePassword}
-              className="p-2 rounded-md bg-white text-white border border-purple-500"
+              className="buttonpass p-2 rounded-md bg-white text-white border border-purple-500"
             >
               {showPassword ? (
                 <img
                   src={hide}
                   alt="hide"
-                  className="w-5 h-5"
+                  className="hides w-5 h-5"
                 />
               ) : (
                 <img
                   src={show}
                   alt="show"
-                  className="w-5 h-5"
+                  className="shows w-5 h-5"
                 />
               )}
             </button>
@@ -105,41 +105,41 @@ const Login = ({ setIsLoggedIn }) => {  // Use the prop correctly here
 
           {/* Display error message */}
           {errorMessage && (
-            <p className="text-red-500 text-sm mt-2 text-center">{errorMessage}</p>
+            <p className="errormess text-red-500 text-sm mt-2 text-center">{errorMessage}</p>
           )}
         </div>
 
         {/* Bottom section */}
-        <div className="p-4 rounded-b-lg">
+        <div className="bottomsec p-4 rounded-b-lg">
           <div className="w-full border-t-2 border-gray-300"></div>
           <div className="flex justify-center items-center space-x-4 pt-6">
             <Link to='/about'>
-              <button className="px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+              <button className="footer-e px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
                 about
               </button>
             </Link>
 
             <Link to='/calendar'>
-              <button className="px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+              <button className="footer-f px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
                 calendar
               </button>
             </Link>
 
             <Link to='/anniversary'>
-              <button className="px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+              <button className="footer-f px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
                 anniversary
               </button>
             </Link>
 
             <Link to='/'>
-              <button className="px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
+              <button className="footer-e px-7 py-2 border-2 text-xs border-gray-300 text-gray-500 rounded-lg hover:bg-gray-100 transition duration-300">
                 home
               </button>
             </Link>
           </div>
 
           <div className="pt-5 text-sm text-gray-300 text-center">
-            <p>(made with love)</p>
+            <p className='markings'>(made with love)</p>
           </div>
         </div>
       </div>

@@ -1,0 +1,26 @@
+@media (max-width: 600px) {
+    .titbox {
+        padding-top: 4px;
+    }
+
+    .tittext {
+        font-size: medium;
+    }
+
+    .contbox {
+        padding-top: 10px;
+    }
+
+    .calmon {
+        font-size: small;
+    }
+
+    .calimage {
+        height: auto;
+    }
+
+    .datecal {
+        width: 8px;
+        height: 8px;
+    }
+}

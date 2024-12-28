@@ -8,5 +8,94 @@
 .solid-shadow {
    box-shadow: 0px 0px 10px rgba(166, 166, 166, 0.9); /* Adjust opacity for more solid look */
 }
+
+@media (max-width: 600px){ 
+  .footer-e {
+      font-size: 0.6rem;
+      width: 40px;
+      padding: 2px;
+      border-radius: 6px;
+      margin: 0;
+  }
+
+  .footer-f {
+      font-size: 0.6rem;
+      width: 70px;
+      padding: 2px;
+      border-radius: 6px;
+      margin: 0;
+      margin-left: 0;
+  }
+
+  .bg-photo{
+      background-size: 60px 60px;
+  }
+
+  .boxlog {
+    width: 80%;
+  }
   
+  .texttitlle {
+    font-size: 1.25rem; /* Smaller text size (text-2xl equivalent) */
+    text-align: center;
+    font-family: 'Shrikhand', sans-serif; /* Custom font */
+  }
+  
+  .textsecond {
+    font-size: 0.75rem; /* Smaller text size (text-sm equivalent) */
+    text-align: center;
+  }
+
+  
+  .textpass {
+    font-size: 1rem; /* Smaller text size (text-lg equivalent) */
+    text-align: center;
+    color: #1f2937; /* text-gray-800 */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .passinput {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* space-x-3 */
+    background-color: #eff6ff; /* bg-blue-50 */
+    padding: 0.5rem; /* p-2 */
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 2px solid #d8b4fe; /* border-purple-300 */
+  }
+  
+  .inputbox {
+    width: 100%; /* Full width */
+    padding: 0.5rem; /* Smaller padding (p-3 equivalent) */
+    border: 2px solid #d8b4fe; /* border-purple-300 */
+    border-radius: 0.375rem; /* rounded-md */
+    outline: none;
+    font-size: small;
+  }
+  
+  .buttonpass {
+    padding: 0.5rem; /* p-2 */
+    border: 1px solid #a78bfa; /* border-purple-500 */
+    border-radius: 0.375rem; /* rounded-md */
+    background-color: #ffffff; /* bg-white */
+  }
+  
+  .icon {
+    width: 1.25rem; /* Smaller size (w-5) */
+    height: 1.25rem; /* Smaller size (h-5) */
+  }
+  
+  .errormess {
+    color: #ef4444; /* text-red-500 */
+    font-size: 0.75rem; /* Smaller text (text-sm) */
+    margin-top:1rem; /* mt-2 */
+    text-align: center;
+  }
+
+  .bottomsec {
+    padding-top: 2px;
+  }
+  
+}
   
